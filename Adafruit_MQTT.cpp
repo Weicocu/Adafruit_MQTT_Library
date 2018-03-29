@@ -146,6 +146,12 @@ Adafruit_MQTT::Adafruit_MQTT(const char *server,
 
 }
 
+void Adafruit_MQTT::setServer(const char *server, uint16_t port)
+{
+  servername = server;
+  portnum = port;
+}
+
 int8_t Adafruit_MQTT::connect() {
   // Connect to the server.
   if (!connectServer())

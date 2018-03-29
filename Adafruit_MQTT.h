@@ -144,6 +144,9 @@ class Adafruit_MQTT {
                 const char *user = "",
                 const char *pass = "");
   virtual ~Adafruit_MQTT() {}
+  
+  // Change the server address. 
+  void setServer(const char *server, uint16_t port);
 
   // Connect to the MQTT server.  Returns 0 on success, otherwise an error code
   // that indicates something went wrong:
